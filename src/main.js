@@ -1,8 +1,8 @@
-//import $ from 'jquery';
+import $ from 'jquery';
 import 'bootstrap';
 import './styles.css';
 
-function validateInputs(year, month, day) {
+export function validateInputs(year, month, day) {
   let highestDay = 0; 
   switch (month) {
     case 1:
@@ -36,6 +36,8 @@ $("button").click(function() {
   let day = parseInt($("#inputDate").val());
   let year = parseInt($("#inputYear").val());
   let month = parseInt($("#inputMonth").val());
-  validateInputs(year, month, day);
-  new Date(year, month, day);
+  console.log(validateInputs(year, month, day));
+ 
+ 
+  // new Date(year, month, day);
 });
