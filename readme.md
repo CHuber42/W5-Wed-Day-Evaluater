@@ -28,4 +28,4 @@
 CHuber42.Gmail.com
 taylorphillips133@gmail.com
 
-##### _Copyright Christopher Huber 2020 & Taylor Phillips all rights reserved._
+##### _Copyright Christopher Huber 2020 & Taylor Phillips all rights reserved_

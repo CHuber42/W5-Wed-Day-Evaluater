@@ -30,6 +30,10 @@ export function validateInputs(year, month, day) {
   if ((day < 1) || (day > highestDay))  {
     return "Invalid";
   }
+  if ((year < -271820) || (year > 275759)) {
+    return "Invalid";
+  } 
+  return "Valid";
 }
 
 $("button").click(function() {
