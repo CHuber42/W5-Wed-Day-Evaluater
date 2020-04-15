@@ -1,4 +1,4 @@
-import { validateInputs } from  './../src/main.js'
+import { validateInputs } from  './../src/helper-functions.js'
 
 
 describe('validateInputs', () => {
