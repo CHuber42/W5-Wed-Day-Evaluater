@@ -2,5 +2,6 @@
 import 'bootstrap';
 import './styles.css';
 
-let now = Date.now();
-console.log(now)
+let now = new Date();
+let today = now.getDay();
+console.log(today)
