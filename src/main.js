@@ -37,6 +37,7 @@ export function validateInputs(year, month, day) {
 }
 
 $("button").click(function() {
+  $("#outputDay").empty();
   let day = parseInt($("#inputDate").val());
   let year = parseInt($("#inputYear").val());
   let month = parseInt($("#inputMonth").val());
@@ -60,10 +61,10 @@ $("button").click(function() {
       case 6: dayOfWeek = "Saturday";
         break;
     }
-    
+    $("#outputDay").append(dayOfWeek);
   }
   else {
-    //terminate program with error message
+    $("#outputDay").append("Invalid Entry!")
   }
  
 
