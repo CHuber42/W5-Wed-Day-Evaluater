@@ -40,8 +40,18 @@ $("button").click(function() {
   let day = parseInt($("#inputDate").val());
   let year = parseInt($("#inputYear").val());
   let month = parseInt($("#inputMonth").val());
-  console.log(validateInputs(year, month, day));
+  if (validateInputs(year, month, day) == "Valid") {
+    let inputDate = Date(year, month, day);
+  }
+  else {
+    //terminate program with error message
+  }
  
- 
-  // new Date(year, month, day);
+
 });
+
+
+//new Date()
+// new Date(value)
+// new Date(dateString)
+// new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]]]]])
