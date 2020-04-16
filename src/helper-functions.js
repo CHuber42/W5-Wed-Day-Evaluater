@@ -1,11 +1,11 @@
-import $ from 'jquery';
 
 function validateInputs(year, month, day) {
-  let highestDay = 0; 
+  let highestDay = 0;
+
   switch (month) {
-    case 1:
-    case 3:
-    case 5:
+    case 1: // if month == 1
+    case 3: // if month == 3
+    case 5: // if month == 5
     case 7:
     case 8:
     case 10:
@@ -34,15 +34,13 @@ function validateInputs(year, month, day) {
   return "Valid";
 }
 
-export function buttonClickActions() {
+export function buttonClickActions(year, month, day) {
   
-  $("#outputDay").empty();
-  let day = parseInt($("#inputDate").val());
-  let year = parseInt($("#inputYear").val());
-  let month = parseInt($("#inputMonth").val());
   if (validateInputs(year, month, day) == "Valid") {
+  
     let inputDate = new Date(year, month - 1, day);
     let conclusionDay = inputDate.getDay();
+   
     let dayOfWeek = "";
     switch (conclusionDay) {
       case 0: dayOfWeek = "Sunday";
@@ -60,11 +58,8 @@ export function buttonClickActions() {
       case 6: dayOfWeek = "Saturday";
         break;
     }
-    $("#outputDay").append(dayOfWeek);
+    return dayOfWeek;
+  } else {
+    return "Invalid Entry!";
   }
-  else {
-    $("#outputDay").append("Invalid Entry!")
-  }
- 
-
 }
